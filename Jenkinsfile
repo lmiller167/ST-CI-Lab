@@ -2,12 +2,16 @@
 node {
   stage('checkout sources') {
         // You should change this to be the appropriate thing
-        git url: 'https://github.com/ColumbusStateWorkforceInnovation/special-topics-ci-lab'
+        git url: ' def repo = 'https://github.com/lmiller167/ST-CI-Lab'
   }
 
   stage('Build') {
     // you should build this repo with a maven build step here
-    echo "hello"
+   //try{
+    withMaven(maven:'maven3'){
+    sh "mvn package"}
+    //}finally{
+    //junit 'build/reports'}
   }
   // you should add a test report here
 }
