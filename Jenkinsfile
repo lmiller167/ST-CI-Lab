@@ -7,9 +7,11 @@ node {
 
   stage('Build') {
     // you should build this repo with a maven build step here
+   //try{
     withMaven(maven:'maven3'){
-    sh 'mvn package'}
-    echo "hello"
+    sh "mvn package"}
+    //}finally{
+    //junit 'build/reports'}
   }
   // you should add a test report here
 }
