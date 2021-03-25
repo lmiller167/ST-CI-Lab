@@ -2,7 +2,7 @@
 node {
   stage('checkout sources') {
         // You should change this to be the appropriate thing
-        git url: ' def repo = 'https://github.com/lmiller167/ST-CI-Lab'
+        git url: 'https://github.com/lmiller167/ST-CI-Lab'
   }
 
   stage('Build') {
